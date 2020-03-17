@@ -16,7 +16,7 @@ $( document).ready(function(){
 		loadImages();
 	});
 	function loadImages(){
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + currentPokemon +"+pokemon&rating=PG&=&api_key=FEC4atVGyyKs8JkSHVUQyI0bto3q6rDC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + currentPokemon +"+%20pokemon&rating=PG&=&api_key=FEC4atVGyyKs8JkSHVUQyI0bto3q6rDC&limit=10";
 		$("#gif-container").empty();
 		$.ajax({
 			url:queryURL,
@@ -35,14 +35,20 @@ $( document).ready(function(){
 		var pokemane = $.inArray(poke,pokeCheck);
 		console.log(pokemane)
 		if (pokemane == -1){
-			$("#addMonster").val("");
 			testAlertON();
 		}else{
-			console.log(poke)
 			poke = poke.toString().substring(0, 1).toUpperCase() + poke.toString().substring(1);
-			console.log(poke)
-			$("#button-container").append("<button class = 'monsterButton' value = '"+ poke +"' type='button'>"+poke+"</button>");
+			if($.inArray(poke,pokemon)== -1){
+				pokemon.push(poke);
+				$("#button-container").append("<button class = 'monsterButton' value = '"+ poke +"' type='button'>"+poke+"</button>");
+				currentPokemon = poke;
+				loadImages();
+			}else{
+				currentPokemon = poke;
+				loadImages();
+			}
 		}
+		$("#addMonster").val("");
 	});
 	function testAlertON(){
 		$('#alert').css('width','50%');
