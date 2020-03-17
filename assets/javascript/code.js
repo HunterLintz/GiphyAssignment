@@ -11,10 +11,10 @@ $( document).ready(function(){
 	for (i = 0; i < pokemon.length; i++){
 		$("#button-container").append("<button class ='monsterButton' value = '"+pokemon[i]+"' type='button'>"+pokemon[i]+"</button>")
 	}
-	$('#addMonster').keypress(function (e) {
-		if (e.which == 13) {
-			$('#submit').click()
-		}
+	$("#button-container").on("click",".monsterButton",function(){
+		currentPokemon = $(this).val();
+		loadImages();
+	});
 	function loadImages(){
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + currentPokemon +"+%20pokemon&rating=PG&=&api_key=FEC4atVGyyKs8JkSHVUQyI0bto3q6rDC&limit=10";
 		$("#gif-container").empty();
@@ -28,10 +28,6 @@ $( document).ready(function(){
 				}
 			});
 	};
-	$("#button-container").on("click",".monsterButton",function(){
-		currentPokemon = $(this).val();
-		loadImages();
-	});
 	$("#submit").on("click",function(){
 		var poke = $("#addMonster").val().toLowerCase();
 		poke = poke.replace(/\s/g, '');
@@ -65,4 +61,8 @@ $( document).ready(function(){
 		$('#alertText').css('opacity','0');
 		}
 	});
+	$('#addMonster').keypress(function (e) {
+		if (e.which == 13) {
+			$('#submit').click()
+		}
 });
