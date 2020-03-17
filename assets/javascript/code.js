@@ -36,13 +36,22 @@ $( document).ready(function(){
 		console.log(pokemane)
 		if (pokemane == -1){
 			$("#addMonster").val("");
-			console.log("Your suck at coding")
+			testAlertON();
 		}else{
 			console.log(poke)
 			poke = poke.toString().substring(0, 1).toUpperCase() + poke.toString().substring(1);
 			console.log(poke)
-			console.log("YOur kinda cool")
 			$("#button-container").append("<button class = 'monsterButton' value = '"+ poke +"' type='button'>"+poke+"</button>");
 		}
 	});
+	function testAlertON(){
+		$('#alert').css('width','50%');
+		$('#alertText').css('opacity','1');
+		setTimeout(function(){testAlertOFF();},5000);
+		}
+		
+		function testAlertOFF(){
+		$('#alert').css('width','0px');
+		$('#alertText').css('opacity','0');
+		}
 });
