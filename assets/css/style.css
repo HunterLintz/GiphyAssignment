@@ -50,7 +50,7 @@ img{
 	padding-bottom: 20px;
 }
 label{
-	font-size: 20px;
+	font-size: 1.2vw;
 	color: #fccf00;
 }
 .gifs{
@@ -84,13 +84,15 @@ label{
 	border: 4px outset slategray;
 }
 #add-container{
-	position: fixed;
+	text-align-last: center;
+	float: right;
 	margin-top: 50px;
 	width: 20%;
-	right: 2%;
-	top: 300px;
+	margin-right: 5%;
+	top: 225px;
 }
 input{
+	text-align-last: initial;
 	margin-top: 5px;
 	font-size: 20px;
 	padding-left: 5px;
