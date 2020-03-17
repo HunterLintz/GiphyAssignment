@@ -55,13 +55,13 @@ $( document).ready(function(){
 		$("#addMonster").val("");
 	});
 	function testAlertON(){
-		$('#alert').css('width','50%');
+		$('#alert').css('opacity','1');
 		$('#alertText').css('opacity','1');
 		setTimeout(function(){testAlertOFF();},5000);
 		}
 		
 		function testAlertOFF(){
-		$('#alert').css('width','0px');
+		$('#alert').css('opacity','0');
 		$('#alertText').css('opacity','0');
 		}
 	});

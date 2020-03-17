@@ -7,6 +7,7 @@
 body{
 	background-image: url(../images/footer_lodyas.png);
 	background-repeat: repeat;
+	font-size: 18px;
 }
 main{
 	margin-top: 20px;
@@ -101,19 +102,21 @@ input{
 #alert{
 	padding-top: 5px;
 	padding-bottom: 5px;
+	padding-left: 5px;
 	margin-top: 10px;
 	position: relative;
 	background: #fccf00;
-	width: auto;
 	float: right;
-	transition: width 2s;
-	width: 0px;
-	margin-right: 25%;
+	width: 70%;
+	left: -47px;
 	overflow: hidden;
+	opacity: 0;
+	transition: opacity 1s;
 }
 #alertText{
 	transition: opacity 1s;
 	opacity: 0;
 	color: #2468b1;
 	white-space: pre;
+	font-size: .8vw;
 }
