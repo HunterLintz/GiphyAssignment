@@ -1,0 +1,97 @@
+*{
+	margin: 0;
+	padding: 0;
+	letter-spacing: 1.6px;
+	font-family: 'Anton', sans-serif;
+}
+body{
+	background-image: url(../images/footer_lodyas.png);
+	background-repeat: repeat;
+}
+main{
+	margin-top: 20px;
+	margin-left: 10%;
+}
+header{
+	padding-top: 20px;
+	width: 70%;
+	padding-left: 7%;
+	padding-right: 23%;
+	padding-bottom: 20px;
+	background-color: #2468b1;
+	color: #fccf00;
+	border-bottom: 4px outset slategray;
+}
+h1{
+	font-size: 50px;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+}
+button{
+	border-color: slategrey;
+	margin: 5px;
+	color: #fccf00;
+	font-size: 20px;
+	background-color: #2468b1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 4px outset slategrey;
+}
+img{
+	margin: 5px;
+	height: 200px;
+}
+.rating{
+	text-align: center;
+	color: #fccf00;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+label{
+	font-size: 20px;
+	color: #fccf00;
+}
+.gifs{
+	margin-left: 5px;
+	float: left;
+}
+#label{
+	width: 70%;
+	margin-left: 15%;
+	background-color: #2468b1;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 4px outset slategray;
+}
+#button-container{
+	width: 70%;
+	text-align: center;
+}
+#gif-container{
+	padding: 20px;
+	padding-left: 5%;
+	padding-bottom: 20px;
+}
+#gifs-container{
+	min-height: 200px;
+	background-color: #2468b1;
+	text-align: center;
+	margin-top: 50px;
+	float: left;
+	width: 70%;
+	border: 4px outset slategray;
+}
+#add-container{
+	position: fixed;
+	margin-top: 50px;
+	width: 20%;
+	right: 2%;
+	top: 300px;
+}
+input{
+	margin-top: 5px;
+	font-size: 20px;
+	padding-left: 5px;
+}
