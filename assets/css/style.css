@@ -83,6 +83,7 @@ label{
 	float: left;
 	width: 70%;
 	border: 4px outset slategray;
+	margin-bottom: 100px;
 }
 #add-container{
 	text-align-last: center;
